@@ -5,6 +5,7 @@ import Greetings from './components/Greetings';
 import Person from './components/Person';
 import Status from './components/Status';
 import Users from './components/Users';
+import UserState from './components/userState/UserState';
 
 function App() {
   const person = {
@@ -40,6 +41,7 @@ function App() {
           <Oscar />
         </Heading>
         <Button handleClick={handleClick} />
+        <UserState />
       </div>
     </>
   );
