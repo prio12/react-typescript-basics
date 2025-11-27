@@ -1,5 +1,6 @@
 import Heading from './components/childrenProps/Heading';
 import Oscar from './components/childrenProps/Oscar';
+import Button from './components/eventProps/Button';
 import Greetings from './components/Greetings';
 import Person from './components/Person';
 import Status from './components/Status';
@@ -23,6 +24,11 @@ function App() {
       lName: 'Ippo',
     },
   ];
+
+  //for event props type
+  const handleClick = (text: string) => {
+    console.log(text);
+  };
   return (
     <>
       <div>
@@ -33,6 +39,7 @@ function App() {
         <Heading>
           <Oscar />
         </Heading>
+        <Button handleClick={handleClick} />
       </div>
     </>
   );
