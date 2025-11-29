@@ -5,6 +5,7 @@ import Oscar from './components/childrenProps/Oscar';
 import Button from './components/eventProps/Button';
 import List from './components/generics/List';
 import Greetings from './components/Greetings';
+import CustomButton from './components/html/CustomButton';
 import Person from './components/Person';
 import RandomNumber from './components/restrictions/RandomNumber';
 import Status from './components/Status';
@@ -66,6 +67,10 @@ function App() {
         />
 
         <RandomNumber value={5} isNegative />
+
+        <CustomButton variant="primary" onClick={() => console.log('clicked')}>
+          Send Message
+        </CustomButton>
       </div>
     </>
   );
