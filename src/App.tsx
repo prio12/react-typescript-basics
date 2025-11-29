@@ -3,6 +3,7 @@ import Profile from './components/auth/Profile';
 import Heading from './components/childrenProps/Heading';
 import Oscar from './components/childrenProps/Oscar';
 import Button from './components/eventProps/Button';
+import List from './components/generics/List';
 import Greetings from './components/Greetings';
 import Person from './components/Person';
 import Status from './components/Status';
@@ -33,6 +34,11 @@ function App() {
   const handleClick = (text: string) => {
     console.log(text);
   };
+
+  //for items (generic concept)
+  const handleItem = (item: { id: number; fName: string; lName: string }) => {
+    console.log(item);
+  };
   return (
     <>
       <div>
@@ -47,6 +53,16 @@ function App() {
         <UserState />
         <Counter />
         <Private isLoggedIn={true} component={Profile} />
+        {/* <List items={['Naruto', 'Madara', 'Minato']} onclick={handleItem} /> */}
+        {/* <List items={[1, 2, 3]} onclick={handleItem} /> */}
+        <List
+          items={[
+            { id: 1, fName: 'Naruto', lName: 'Uzumaki' },
+            { id: 2, fName: 'Madara', lName: 'Uchiha' },
+            { id: 3, fName: 'Minato', lName: 'Namekaze' },
+          ]}
+          onclick={handleItem}
+        />
       </div>
     </>
   );
