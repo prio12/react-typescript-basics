@@ -6,6 +6,7 @@ import Button from './components/eventProps/Button';
 import List from './components/generics/List';
 import Greetings from './components/Greetings';
 import Person from './components/Person';
+import RandomNumber from './components/restrictions/RandomNumber';
 import Status from './components/Status';
 import Counter from './components/useReducer/Counter';
 import Users from './components/Users';
@@ -41,7 +42,7 @@ function App() {
   };
   return (
     <>
-      <div>
+      <div className="h-full my-12">
         <Greetings topic="Typing props" user="Mak Dev" isLoggedIn={true} />
         <Person person={person} />
         <Users users={users} />
@@ -63,6 +64,8 @@ function App() {
           ]}
           onclick={handleItem}
         />
+
+        <RandomNumber value={5} isNegative />
       </div>
     </>
   );

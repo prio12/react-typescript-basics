@@ -10,9 +10,9 @@ const List = <T extends { id: number; fName: string; lName: string }>({
   return (
     <div>
       <h1>List of Items</h1>
-      {items.map((item, index) => {
+      {items.map((item) => {
         return (
-          <div key={index} onClick={() => onclick(item)}>
+          <div key={item.id} onClick={() => onclick(item)}>
             <p>{item.fName}</p>
             <p>{item.lName}</p>
           </div>
